@@ -9,6 +9,10 @@ public class BookCopyDAO {
     // Create
     public void addBookCopy(BookCopy bookCopy) throws SQLException {
         String sql = "INSERT INTO \"Library\".book_copy (book_id, condition, location, is_available, barcode) VALUES (?, ?, ?, ?, ?)";
+        setMatchingFields(bookCopy, sql);
+    }
+
+    private void setMatchingFields(BookCopy bookCopy, String sql) throws SQLException {
         try (Connection conn = DataSource.getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setInt(1, bookCopy.getBookId());
             stmt.setString(2, bookCopy.getCondition());
@@ -41,14 +45,7 @@ public class BookCopyDAO {
     // Update
     public void updateBookCopy(BookCopy bookCopy) throws SQLException {
         String sql = "UPDATE \"Library\".book_copy SET book_id = ?, condition = ?, location = ?, is_available = ? WHERE barcode = ?";
-        try (Connection conn = DataSource.getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setInt(1, bookCopy.getBookId());
-            stmt.setString(2, bookCopy.getCondition());
-            stmt.setString(3, bookCopy.getLocation());
-            stmt.setBoolean(4, bookCopy.isAvailable());
-            stmt.setString(5, bookCopy.getBarcode());
-            stmt.executeUpdate();
-        }
+        setMatchingFields(bookCopy, sql);
     }
 
     // Delete

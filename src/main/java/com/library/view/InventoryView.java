@@ -7,7 +7,6 @@ import java.awt.Color;
 
 import java.awt.Dimension;
 import java.sql.SQLException;
-import java.util.Arrays;
 
 /**
  * @author dagi_
@@ -29,7 +28,7 @@ public class InventoryView extends javax.swing.JFrame {
     private void initComponents() throws SQLException {
         java.awt.GridBagConstraints gridBagConstraints;
 
-        aC1 = new net.miginfocom.layout.AC();
+        new net.miginfocom.layout.AC();
 
         headerPanel = new javax.swing.JPanel();
         toolsPanel = new javax.swing.JPanel();
@@ -61,22 +60,14 @@ public class InventoryView extends javax.swing.JFrame {
         jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\dagi_\\Downloads\\add-to-playlist.png")); // NOI18N
         jButton3.setToolTipText("Add Entry");
         jButton3.setBorder(null);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
+        jButton3.addActionListener(this::jButton3ActionPerformed);
 
         jButton4.setBackground(new java.awt.Color(30, 30, 30));
         jButton4.setIcon(new javax.swing.ImageIcon("C:\\Users\\dagi_\\Downloads\\list (1).png")); // NOI18N
         jButton4.setToolTipText("Edit Entry");
         jButton4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jButton4.setPreferredSize(new java.awt.Dimension(42, 40));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
+        jButton4.addActionListener(this::jButton4ActionPerformed);
 
         jButton6.setBackground(new java.awt.Color(30, 30, 30));
         jButton6.setForeground(new java.awt.Color(30, 30, 30));
@@ -118,11 +109,7 @@ public class InventoryView extends javax.swing.JFrame {
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
         jButton2.setIconTextGap(10);
         jButton2.setMargin(new java.awt.Insets(2, 48, 3, 14));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
+        jButton2.addActionListener(this::jButton2ActionPerformed);
         searchPanel.add(jButton2);
         jButton2.setBounds(40, 20, 16, 30);
 
@@ -144,11 +131,7 @@ public class InventoryView extends javax.swing.JFrame {
                 jTextField1FocusLost(evt);
             }
         });
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
+        jTextField1.addActionListener(this::jTextField1ActionPerformed);
         searchPanel.add(jTextField1);
         jTextField1.setBounds(70, 20, 630, 30);
 
@@ -358,50 +341,8 @@ public class InventoryView extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jTextField1FocusLost
 
-//	/**
-//	 * @param args the command line arguments
-//	 */
-//	public static void main(String args[]) {
-//		/* Set the Nimbus look and feel */
-//		// <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
-//		// (optional) ">
-//		/*
-//		 * If Nimbus (introduced in Java SE 6) is not available, stay with the default
-//		 * look and feel. For details see
-//		 * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-//		 */
-//		try {
-//			for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//				if ("Nimbus".equals(info.getName())) {
-//					javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//					break;
-//				}
-//			}
-//		}
-//		catch (ClassNotFoundException ex) {
-//			java.util.logging.Logger.getLogger(InventoryView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//		}
-//		catch (InstantiationException ex) {
-//			java.util.logging.Logger.getLogger(InventoryView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//		}
-//		catch (IllegalAccessException ex) {
-//			java.util.logging.Logger.getLogger(InventoryView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//		}
-//		catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//			java.util.logging.Logger.getLogger(InventoryView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//		}
-//		// </editor-fold>
-//
-//		/* Create and display the form */
-//		java.awt.EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				new InventoryView().setVisible(true);
-//			}
-//		});
-//	}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private net.miginfocom.layout.AC aC1;
     private javax.swing.JPanel filterPanel;
     private javax.swing.JPanel headerPanel;
     private javax.swing.JButton jButton2;
