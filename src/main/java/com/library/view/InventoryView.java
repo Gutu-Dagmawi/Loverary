@@ -1,61 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileS            @Override
-            public int getRowCount() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-
-            @Override
-            public int getColumnCount() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-
-            @Override
-            public String getColumnName(int columnIndex) {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-
-            @Override
-            public Class<?> getColumnClass(int columnIndex) {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-
-            @Override
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-
-            @Override
-            public Object getValueAt(int rowIndex, int columnIndex) {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-
-            @Override
-            public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-
-            @Override
-            public void addTableModelListener(TableModelListener l) {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-
-            @Override
-            public void removeTableModelListener(TableModelListener l) {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-        }stem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-
 package com.library.view;
+
+import com.library.model.BookCopyDAO;
+import com.library.utils.BasicUtils;
+import com.library.utils.Constants;
+import java.awt.Color;
+
+import java.awt.Dimension;
+import java.sql.SQLException;
+import java.util.Arrays;
 
 /**
  * @author dagi_
  */
 public class InventoryView extends javax.swing.JFrame {
 
-	/** Creates new form BaseView */
-	public InventoryView() {
+	/** Creates new form BaseFrame */
+	public InventoryView() throws SQLException {
 		initComponents();
 	}
 
@@ -66,148 +26,402 @@ public class InventoryView extends javax.swing.JFrame {
 	 */
 	@SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents() throws SQLException {
+        java.awt.GridBagConstraints gridBagConstraints;
 
+        aC1 = new net.miginfocom.layout.AC();
+
+        headerPanel = new javax.swing.JPanel();
+        toolsPanel = new javax.swing.JPanel();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        searchPanel = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
+        filterPanel = new javax.swing.JPanel();
         jInternalFrame1 = new javax.swing.JInternalFrame();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        tablePanel = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTableMain = new javax.swing.JTable();
+        jScrollBar1 = new javax.swing.JScrollBar();
+        jScrollBar2 = new javax.swing.JScrollBar();
+        jMenuBar2 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
+//
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBounds(new java.awt.Rectangle(0, 0, 500, 500));
-        setMinimumSize(new java.awt.Dimension(500, 500));
+        setTitle("Loverary");
 
-        jPanel1.setLayout(new java.awt.BorderLayout());
+        headerPanel.setPreferredSize(new java.awt.Dimension(100, 60));
 
-        jInternalFrame1.setBackground(new java.awt.Color(6, 19, 26));
-        jInternalFrame1.setClosable(true);
+        jButton3.setBackground(new java.awt.Color(30, 30, 30));
+        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\dagi_\\Downloads\\add-to-playlist.png")); // NOI18N
+        jButton3.setToolTipText("Add Entry");
+        jButton3.setBorder(null);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jButton4.setBackground(new java.awt.Color(30, 30, 30));
+        jButton4.setIcon(new javax.swing.ImageIcon("C:\\Users\\dagi_\\Downloads\\list (1).png")); // NOI18N
+        jButton4.setToolTipText("Edit Entry");
+        jButton4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jButton4.setPreferredSize(new java.awt.Dimension(42, 40));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        jButton6.setBackground(new java.awt.Color(30, 30, 30));
+        jButton6.setForeground(new java.awt.Color(30, 30, 30));
+        jButton6.setIcon(new javax.swing.ImageIcon("C:\\Users\\dagi_\\Downloads\\remove (1).png")); // NOI18N
+        jButton6.setToolTipText("");
+        jButton6.setBorder(null);
+
+        javax.swing.GroupLayout toolsPanelLayout = new javax.swing.GroupLayout(toolsPanel);
+        toolsPanel.setLayout(toolsPanelLayout);
+        toolsPanelLayout.setHorizontalGroup(
+            toolsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(toolsPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton6)
+                .addContainerGap(255, Short.MAX_VALUE))
+        );
+        toolsPanelLayout.setVerticalGroup(
+            toolsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(toolsPanelLayout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addGroup(toolsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jButton6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+
+        searchPanel.setPreferredSize(new java.awt.Dimension(120, 100));
+        searchPanel.setLayout(null);
+
+        jButton2.setBackground(new java.awt.Color(30, 30, 30));
+        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\dagi_\\Downloads\\search (2).png")); // NOI18N
+        jButton2.setBorder(null);
+        jButton2.setDefaultCapable(false);
+        jButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEADING);
+        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        jButton2.setIconTextGap(10);
+        jButton2.setMargin(new java.awt.Insets(2, 48, 3, 14));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        searchPanel.add(jButton2);
+        jButton2.setBounds(40, 20, 16, 30);
+
+        jTextField1.setBackground(new java.awt.Color(30, 30, 30));
+        jTextField1.setFont(new java.awt.Font("Segoe UI Historic", 0, 16)); // NOI18N
+        jTextField1.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.disabledText"));
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jTextField1.setText("   Search table");
+        jTextField1.setToolTipText("");
+        jTextField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 51, 51), 1, true));
+        jTextField1.setCaretColor(new java.awt.Color(255, 255, 255));
+        jTextField1.setMargin(new java.awt.Insets(2, 20, 2, 26));
+        jTextField1.setPreferredSize(new java.awt.Dimension(109, 25));
+        jTextField1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jTextField1FocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextField1FocusLost(evt);
+            }
+        });
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        searchPanel.add(jTextField1);
+        jTextField1.setBounds(70, 20, 630, 30);
+
+        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 266, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 27, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout headerPanelLayout = new javax.swing.GroupLayout(headerPanel);
+        headerPanel.setLayout(headerPanelLayout);
+        headerPanelLayout.setHorizontalGroup(
+            headerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(headerPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(toolsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(searchPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 694, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        headerPanelLayout.setVerticalGroup(
+            headerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(searchPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(headerPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(toolsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(62, 62, 62))
+            .addGroup(headerPanelLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(headerPanel, java.awt.BorderLayout.NORTH);
+
+        filterPanel.setPreferredSize(new java.awt.Dimension(270, 100));
+
+        jInternalFrame1.setBackground(new java.awt.Color(40, 40, 40));
+        jInternalFrame1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(40, 40, 40))); // NOI18N
         jInternalFrame1.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
-        jInternalFrame1.setForeground(java.awt.Color.white);
-        jInternalFrame1.setIconifiable(true);
-        jInternalFrame1.setMaximizable(true);
-        jInternalFrame1.setTitle("Advanced Search");
+        jInternalFrame1.setForeground(new java.awt.Color(255, 255, 255));
+        jInternalFrame1.setTitle("Filters");
         jInternalFrame1.setToolTipText("");
-        jInternalFrame1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
-        jInternalFrame1.setFrameIcon(new javax.swing.ImageIcon("C:\\Users\\dagi_\\Downloads\\settings-sliders.png")); // NOI18N
-        jInternalFrame1.setMaximumSize(new java.awt.Dimension(250, 36));
+        jInternalFrame1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jInternalFrame1.setFrameIcon(new javax.swing.ImageIcon("C:\\Users\\dagi_\\Downloads\\settings-sliders (1).png")); // NOI18N
         jInternalFrame1.setMinimumSize(new java.awt.Dimension(0, 0));
-        jInternalFrame1.setPreferredSize(new java.awt.Dimension(250, 36));
-        try {
-            jInternalFrame1.setSelected(true);
-        } catch (java.beans.PropertyVetoException e1) {
-            e1.printStackTrace();
-        }
         jInternalFrame1.setVisible(true);
+        jInternalFrame1.addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+                filter_Resized(evt);
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
 
         javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
         jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
         jInternalFrame1Layout.setHorizontalGroup(
             jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 248, Short.MAX_VALUE)
+            .addGap(0, 262, Short.MAX_VALUE)
         );
         jInternalFrame1Layout.setVerticalGroup(
             jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 547, Short.MAX_VALUE)
+            .addGap(0, 539, Short.MAX_VALUE)
         );
 
-        jPanel1.add(jInternalFrame1, java.awt.BorderLayout.EAST);
-        try {
-            jInternalFrame1.setMaximum(true);
-        } catch (java.beans.PropertyVetoException e1) {
-            e1.printStackTrace();
-        }
+        javax.swing.GroupLayout filterPanelLayout = new javax.swing.GroupLayout(filterPanel);
+        filterPanel.setLayout(filterPanelLayout);
+        filterPanelLayout.setHorizontalGroup(
+            filterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, filterPanelLayout.createSequentialGroup()
+                .addComponent(jInternalFrame1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        filterPanelLayout.setVerticalGroup(
+            filterPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(filterPanelLayout.createSequentialGroup()
+                .addComponent(jInternalFrame1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(25, 25, 25))
+        );
 
-        getContentPane().add(jPanel1, java.awt.BorderLayout.EAST);
+        getContentPane().add(filterPanel, java.awt.BorderLayout.LINE_END);
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+        tablePanel.setLayout(new java.awt.GridBagLayout());
 
-            },
-            new String [] {
-                "Title", "ISBN", "Author", "Status"
-            }
+        jTableMain.setModel(new javax.swing.table.DefaultTableModel(
+                BasicUtils.getRowArray(new BookCopyDAO().getAllBookCopies()), BasicUtils.getColumns("book_copy", "Library")
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane3.setViewportView(jTableMain);
 
-        getContentPane().add(jScrollPane2, java.awt.BorderLayout.CENTER);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.ipadx = 1068;
+        gridBagConstraints.ipady = 450;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(0, 6, 0, 0);
+        tablePanel.add(jScrollPane3, gridBagConstraints);
 
-        jMenuBar1.setPreferredSize(new java.awt.Dimension(129, 50));
+        jScrollBar1.setOrientation(javax.swing.JScrollBar.HORIZONTAL);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.ipadx = 1085;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 5, 0);
+        tablePanel.add(jScrollBar1, gridBagConstraints);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.VERTICAL;
+        gridBagConstraints.ipady = 471;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(0, 12, 0, 6);
+        tablePanel.add(jScrollBar2, gridBagConstraints);
 
-        jMenu1.setIcon(new javax.swing.ImageIcon("C:\\Users\\dagi_\\Downloads\\house-chimney.png")); // NOI18N
-        jMenu1.setMinimumSize(new java.awt.Dimension(55, 22));
-        jMenuBar1.add(jMenu1);
+        getContentPane().add(tablePanel, java.awt.BorderLayout.CENTER);
 
-        jMenu2.setText("Edit");
-        jMenu2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jMenu2.setMargin(new java.awt.Insets(0, 10, 0, 10));
-        jMenuBar1.add(jMenu2);
+        jMenuBar2.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jMenuBar2.setPreferredSize(new java.awt.Dimension(90, 43));
+        jMenuBar2.setRequestFocusEnabled(false);
 
-        jMenu3.setText("Tools");
-        jMenu3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jMenu3.setMargin(new java.awt.Insets(3, 16, 3, 16));
-        jMenuBar1.add(jMenu3);
+        jMenu3.setText("File");
+        jMenuBar2.add(jMenu3);
 
-        setJMenuBar(jMenuBar1);
+        jMenu4.setText("Edit");
+        jMenu4.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jMenu4.setMargin(new java.awt.Insets(3, 13, 3, 13));
+        jMenu4.setPreferredSize(new java.awt.Dimension(55, 28));
+        jMenuBar2.add(jMenu4);
+
+        setJMenuBar(jMenuBar2);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-	/**
-	 * @param args the command line arguments
-	 */
-	public static void main(String args[]) {
-		/* Set the Nimbus look and feel */
-		// <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
-		// (optional) ">
-		/*
-		 * If Nimbus (introduced in Java SE 6) is not available, stay with the default
-		 * look and feel. For details see
-		 * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-		 */
-		try {
-			for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-				if ("Nimbus".equals(info.getName())) {
-					javax.swing.UIManager.setLookAndFeel(info.getClassName());
-					break;
-				}
-			}
-		}
-		catch (ClassNotFoundException ex) {
-			java.util.logging.Logger.getLogger(InventoryView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-		}
-		catch (InstantiationException ex) {
-			java.util.logging.Logger.getLogger(InventoryView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-		}
-		catch (IllegalAccessException ex) {
-			java.util.logging.Logger.getLogger(InventoryView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-		}
-		catch (javax.swing.UnsupportedLookAndFeelException ex) {
-			java.util.logging.Logger.getLogger(InventoryView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-		}
-		// </editor-fold>
-		// </editor-fold>
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
-		/* Create and display the form */
-		java.awt.EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				new InventoryView().setVisible(true);
-			}
-		});
-	}
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void filter_Resized(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_filter_Resized
+        // Setting preferred size for jTableMain
+        Dimension preferredSize = new Dimension(Constants.SCREEN_SIZE.width, jTableMain.getHeight());
+
+        // Set preferred size for the scroll pane and table
+		tablePanel.setPreferredSize(preferredSize);
+        jScrollPane3.setPreferredSize(preferredSize);
+        jTableMain.setPreferredScrollableViewportSize(preferredSize);
+
+        // Revalidate and repaint the scroll pane and internal frame
+		tablePanel.revalidate();
+		tablePanel.repaint();
+
+        jScrollPane3.revalidate();
+        jScrollPane3.repaint();
+
+        // Hiding jInternalFrame1
+		jInternalFrame1.setVisible(false);
+
+    }//GEN-LAST:event_filter_Resized
+
+    private void jTextField1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField1FocusGained
+			 jTextField1.setText("");
+			 jTextField1.setCaretColor(Color.yellow);
+			 jTextField1.setForeground(Color.WHITE);
+    }//GEN-LAST:event_jTextField1FocusGained
+
+    private void jTextField1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField1FocusLost
+		jTextField1.setText(" Search table");
+		jTextField1.setForeground(Color.lightGray);
+
+
+    }//GEN-LAST:event_jTextField1FocusLost
+
+//	/**
+//	 * @param args the command line arguments
+//	 */
+//	public static void main(String args[]) {
+//		/* Set the Nimbus look and feel */
+//		// <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
+//		// (optional) ">
+//		/*
+//		 * If Nimbus (introduced in Java SE 6) is not available, stay with the default
+//		 * look and feel. For details see
+//		 * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+//		 */
+//		try {
+//			for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//				if ("Nimbus".equals(info.getName())) {
+//					javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//					break;
+//				}
+//			}
+//		}
+//		catch (ClassNotFoundException ex) {
+//			java.util.logging.Logger.getLogger(InventoryView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//		}
+//		catch (InstantiationException ex) {
+//			java.util.logging.Logger.getLogger(InventoryView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//		}
+//		catch (IllegalAccessException ex) {
+//			java.util.logging.Logger.getLogger(InventoryView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//		}
+//		catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//			java.util.logging.Logger.getLogger(InventoryView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//		}
+//		// </editor-fold>
+//
+//		/* Create and display the form */
+//		java.awt.EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				new InventoryView().setVisible(true);
+//			}
+//		});
+//	}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private net.miginfocom.layout.AC aC1;
+    private javax.swing.JPanel filterPanel;
+    private javax.swing.JPanel headerPanel;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton6;
     private javax.swing.JInternalFrame jInternalFrame1;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable2;
+    private javax.swing.JScrollBar jScrollBar1;
+    private javax.swing.JScrollBar jScrollBar2;
+    private javax.swing.JScrollPane jScrollPane3;
+
+    private javax.swing.JTable jTableMain;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JPanel searchPanel;
+    private javax.swing.JPanel tablePanel;
+    private javax.swing.JPanel toolsPanel;
     // End of variables declaration//GEN-END:variables
 
 }
