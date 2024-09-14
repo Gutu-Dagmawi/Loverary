@@ -1,0 +1,297 @@
+JFDML JFormDesigner: "8.2.3.0.386" Java: "17.0.11" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"title": "Loverary"
+			"minimumSize": new java.awt.Dimension( 1000, 750 )
+			"preferredSize": new java.awt.Dimension( 1200, 800 )
+			"defaultCloseOperation": 2
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.CardLayout ) ) {
+				name: "panel5"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :::p, par l {seq l {comp button2:::p:173:p, space :p:24:p, comp label2:::p::p, space :0:0:p, comp comboBox1:::::x, space :p:10:p, comp label3:::p::p, space s:::p, comp textField1:::::x, space :::p}, seq l {comp label4:::p::p, space :p:576:p}}, par l {comp button1:::p:128:p, comp button5:::::x}, space :p:18:p}}"
+					"$verticalGroup": "par l {seq {space :::p, par l {comp label4:::p:66:p, seq l {space :p:12:p, comp button5:::p::p}}, space s:::p, par l:::p {par b {comp comboBox1::b:p::p, comp button2::b:p:39:p, comp label2::b:p::p, comp label3::b:p::p, comp textField1::b:p:48:p}, comp button1:::::x}, space :::x}}"
+				} ) {
+					name: "panel1"
+					"border": new javax.swing.border.MatteBorder( 1, 1, 1, 1, sfield java.awt.Color lightGray )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField1"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox1"
+						"font": &SwingDerivedFont0 new com.jformdesigner.model.SwingDerivedFont( null, 0, 6, false )
+						"model": &DefaultComboBoxModel0 new javax.swing.DefaultComboBoxModel {
+							selectedItem: "Available"
+							addElement( "Available" )
+							addElement( "Checked Out" )
+							addElement( "On Hold" )
+						}
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button1"
+						"text": "Search"
+						"font": &SwingDerivedFont1 new com.jformdesigner.model.SwingDerivedFont( null, 131073, 5, false )
+						"background": &Color0 new java.awt.Color( 36, 11, 255, 255 )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button2"
+						"text": "Checkout"
+						"font": &SwingDerivedFont2 new com.jformdesigner.model.SwingDerivedFont( null, 1, 6, false )
+						"background": &Color1 new java.awt.Color( 184, 94, 5, 255 )
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "checkOutMouseClicked", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label2"
+						"text": "Show:"
+						"font": &SwingDerivedFont3 new com.jformdesigner.model.SwingDerivedFont( null, 0, 6, false )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label3"
+						"text": "Search:"
+						"font": &SwingDerivedFont4 new com.jformdesigner.model.SwingDerivedFont( null, 0, 6, false )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label4"
+						"text": sfield com.jformdesigner.model.FormObject NULL_VALUE
+						"icon": &SwingIcon0 new com.jformdesigner.model.SwingIcon( 0, "/assets/logo-no-background(resize2).png" )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button5"
+						"font": &SwingDerivedFont5 new com.jformdesigner.model.SwingDerivedFont( null, 1, 7, false )
+						"background": new java.awt.Color( 243, 132, 20, 255 )
+						"text": "Logout"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "card1"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par t {seq {space :p:17:p, par l {seq {comp button6:::p:150:p, space s:::p, comp label11:::p::p, space u:::p, comp textField2::::530:x, space u:::p, comp button8:::p:121:p, space :p:6:p}, seq {comp label10:::p:235:p, space :::p, comp label12:::p:52:p, space u:::p, comp comboBox3:::p:138:p, space ::320:x, comp button7:::p:142:p}}, space :::p}}"
+					"$verticalGroup": "par l {seq l {space :::p, par l {comp button7:::p::p, seq l {space :p:5:p, par b {comp label12::b:p::p, comp comboBox3::b:p:25:p}}, comp label10::l:p:46:p}, space ::38:x, par l {par b {comp button8::b:p::p, comp textField2::b:p:48:p}, par b:t {comp button6::b:p::p, comp label11::b:p::p}}, space :::p}}"
+				} ) {
+					name: "panel6"
+					"border": new javax.swing.border.MatteBorder( 1, 1, 1, 1, sfield java.awt.Color darkGray )
+					"maximumSize": new java.awt.Dimension( 33448, 328 )
+					"preferredSize": new java.awt.Dimension( 930, 70 )
+					"minimumSize": new java.awt.Dimension( 766, 62 )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label10"
+						"text": sfield com.jformdesigner.model.FormObject NULL_VALUE
+						"icon": #SwingIcon0
+						"horizontalAlignment": 2
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button6"
+						"text": "Check In"
+						"font": #SwingDerivedFont2
+						"background": #Color1
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "checkOutMouseClicked", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label11"
+						"text": "Search:"
+						"font": #SwingDerivedFont4
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label12"
+						"text": "Show:"
+						"font": #SwingDerivedFont3
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "comboBox3"
+						"font": #SwingDerivedFont0
+						"model": #DefaultComboBoxModel0
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField2"
+						"preferredSize": new java.awt.Dimension( 500, 30 )
+						"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 10, false )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button7"
+						"font": #SwingDerivedFont5
+						"background": new java.awt.Color( 0, 102, 255, 255 )
+						"text": "Logout"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "button8"
+						"text": "Search"
+						"font": #SwingDerivedFont1
+						"background": #Color0
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "card2"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.CardLayout ) ) {
+				name: "panel2"
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane1"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "table1"
+						"font": new com.jformdesigner.model.SwingDerivedFont( null, 65536, 3, false )
+						"foreground": sfield com.jformdesigner.model.FormObject NULL_VALUE
+						"rowHeight": 30
+						"rowMargin": 11
+						"selectionMode": 0
+						auxiliary() {
+							"JavaCodeGenerator.postCreateCode": "setTableModel();\n"
+							"model.noCode": true
+						}
+						addEvent( new FormEvent( "java.beans.PropertyChangeListener", "propertyChange", "table1PropertyChange", true, "selectedRow" ) )
+						addEvent( new FormEvent( "java.beans.PropertyChangeListener", "propertyChange", "table1PropertyChange", true, "selectedRow" ) )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "card2"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {comp panel4:::p:821:p, space :0:105:x}}"
+					"$verticalGroup": "par l {seq l {space :p:17:p, comp panel4:::p:611:p, space :::x}}"
+				} ) {
+					name: "panel3"
+					"border": new javax.swing.border.BevelBorder( 1, null, null, null, null )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+						"$horizontalGroup": "par l {seq {par l {seq {space :p:25:p, comp label1:::p:116:p, space :::p, par l {comp titleField:::::x, comp patronField::l:::x}}, seq {par l {seq {space :p:31:p, comp label8:::p:116:p}, seq l {space :p:16:p, comp button3:::p:110:p}, seq {space :::p, par t {comp label7::t:p::p, comp label5::t:p:135:p, comp label6::t:p:110:p}, space :::p, par l:::p {comp comboBox2::::669:x, comp dueDateField:::::x, comp coDateField:::::x}}}, space :0:0:x}, seq t {space :0:504:x, comp button4:::p:312:p}}, space :::p}}"
+						"$verticalGroup": "par l {seq l {space :p:15:p, comp button3:::p::p, space :::x, par l {seq t {par l {comp titleField:::p:42:p, comp label8:::p:42:p}, space :p:37:p, par b {comp patronField::b:p:44:p, comp label1::b:p:42:p}, space :p:59:p, comp label5:::p::p}, comp coDateField::t:p:46:p}, space :p:29:p, par t {comp label7::t:p::p, seq t {par t {comp dueDateField:::p:46:p, comp label6:::p:34:p}, space :p:34:p, comp comboBox2:::p:49:p}}, space :p:32:p, comp button4:::p:62:p, space :p:34:p}}"
+					} ) {
+						name: "panel4"
+						"maximumSize": new java.awt.Dimension( 65802, 900 )
+						"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+						"preferredSize": new java.awt.Dimension( 800, 800 )
+						"minimumSize": new java.awt.Dimension( 711, 900 )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button3"
+							"text": "Back"
+							"background": new java.awt.Color( 184, 94, 5, 255 )
+							"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 7, false )
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "backButtonMouseClicked", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "patronField"
+							"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 7, false )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label1"
+							"text": " Patron :"
+							"font": &SwingDerivedFont6 new com.jformdesigner.model.SwingDerivedFont( null, 0, 6, false )
+							"horizontalAlignment": 4
+							"verticalAlignment": 3
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "coDateField"
+							"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 7, false )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label5"
+							"text": "   Checkout Date :"
+							"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 4, false )
+							"horizontalAlignment": 0
+							"verticalTextPosition": 3
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "dueDateField"
+							"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 5, false )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label6"
+							"text": "Due Date : "
+							"font": &SwingDerivedFont7 new com.jformdesigner.model.SwingDerivedFont( null, 0, 6, false )
+							"horizontalAlignment": 4
+							"verticalTextPosition": 3
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "comboBox2"
+							"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 6, false )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label7"
+							"text": "Copy Barcode :"
+							"font": #SwingDerivedFont7
+							"horizontalAlignment": 4
+							"verticalTextPosition": 3
+						} )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button4"
+							"text": "Confirm Checkout"
+							"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 6, false )
+							"background": new java.awt.Color( 184, 94, 5, 255 )
+							addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "confConfirmBtnMouseClicked", true ) )
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "titleField"
+							"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 7, false )
+						} )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label8"
+							"text": " Book Title : "
+							"font": #SwingDerivedFont6
+							"horizontalAlignment": 4
+							"verticalAlignment": 3
+						} )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "card1"
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane2"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "table2"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "card4"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {space :0:930:x}"
+					"$verticalGroup": "par l {space :0:610:x}"
+				} ) {
+					name: "panel7"
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "card3"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 5, 0 )
+			"size": new java.awt.Dimension( 746, 635 )
+		} )
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp dialogPane:::p::p}"
+			"$verticalGroup": "par l {comp dialogPane:::p::p}"
+		} ) {
+			name: "successDialog"
+			"modal": true
+			auxiliary() {
+				"JavaCodeGenerator.variableGetter": true
+			}
+			addEvent( new FormEvent( "java.awt.event.WindowListener", "windowClosing", "successDialogWindowClosing", false ) )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space :::x, comp contentPanel:::p::p, space :p:15:p}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp contentPanel:::p::p, space ::93:x}}"
+			} ) {
+				name: "dialogPane"
+				"border": new javax.swing.border.EmptyBorder( 12, 12, 12, 12 )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :p:77:p, comp label9:::p:300:p, space ::70:x}}"
+					"$verticalGroup": "par l {seq l {space :p:65:p, comp label9:::p:33:p, space ::116:x}}"
+				} ) {
+					name: "contentPanel"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label9"
+						"text": "Checked Out Successfully!"
+						"font": new com.jformdesigner.model.SwingDerivedFont( null, 2, 9, false )
+						"horizontalAlignment": 0
+						"foreground": new java.awt.Color( 7, 248, 7, 255 )
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 395, 240 )
+			"location": new java.awt.Point( 0, 646 )
+		} )
+	}
+}
